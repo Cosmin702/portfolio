@@ -58,7 +58,7 @@ const PROJECTS = [
     summary: "Battery nodes read temperature, humidity, light and soil moisture and sleep most of the time. A door node detects when the door opens and the receiver sends an instant phone notification. Debugged real issues like the ADC2/Wi-Fi conflict and deep-sleep crashes.",
     stack: ["ESP32", "ESP-NOW", "Deep sleep", "NVS", "Telegram bot"],
     role: "Solo",
-    links: { repo: "" } // TODO
+    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/esp32-espnow-sensor-network" } // TODO: manca il codice del door node
   },
   {
     id: "robot-car",
@@ -104,7 +104,7 @@ const PROJECTS = [
     image: "",
     summary: "Collects recipes from the web and processes them with IBM watsonx.",
     stack: ["Python", "Web scraping", "IBM watsonx"],
-    links: { repo: "" }
+    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/recipe-scraper" }
   },
   {
     id: "codicefiscale",

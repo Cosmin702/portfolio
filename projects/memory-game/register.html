@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="js/register-script.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.svg">
+
+</head>
+<body>
+    <form onsubmit="registra();return false">
+        <h1>Registrati</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button class="bottone" onclick="window.location.href = 'login.html'">Accedi</button>
+        <button class="registrati bottone" type="submit" value="Register">Registrati</button>
+        <button class="home bottone" onclick="window.location.href = 'index.html'">Home</button>
+    </form>
+    
+</body>
+</html>

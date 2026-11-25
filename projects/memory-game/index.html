@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <script src="js/main.js"></script>
+    <script src="js/register-script.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.svg">
+
+</head>
+<body onload="utente(), punteggi()">
+    <div class="main">
+
+        <h2 id="username">Username: </h2>
+
+        <div class="login-register">
+            <button class="bottone" onclick="window.location.href = 'login.html'">accedi</button>
+            <button class="registrati bottone" onclick="window.location.href = 'register.html'">registrati</button>
+            <button class="bottone" onclick="logout()">Esci</button>
+        </div>
+        
+        <h3>Scegli la difficoltà</h3>
+
+        <div class="difficolta">
+            <button class="bottone" onclick="window.location.href = 'facile.html'">facile</button>
+            <button class="bottone" onclick="window.location.href = 'medio.html'">medio</button>
+            <button class="bottone" onclick="window.location.href = 'difficile.html'">difficile</button>
+        </div>
+
+
+        <h3>Punteggio: </h3>
+
+        <table class="score-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Facile</th>
+                    <th>Medio</th>
+                    <th>Difficile</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+
+</body>
+</html>

@@ -32,3 +32,14 @@ desktop.ini
 
 # --- Note interne per Claude Code: restano in locale, NON vanno pubblicate su GitHub Pages ---
 CLAUDE.md
+
+# --- Progetti ---
+# credenziali ESP32 (si parte da secrets.example.h)
+secrets.h
+# export del password checker: contengono password reali
+*.csv
+__pycache__/
+*.py[cod]
+.venv/
+# i template senza segreti vanno nel repo
+!secrets.example.h
