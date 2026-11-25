@@ -45,7 +45,7 @@ const PROJECTS = [
     summary: "A custom PCB with an ESP32-C3 that sits on top of the original gate remote and presses its buttons, so the gate opens from my phone over the internet while the normal remote keeps working. My final high-school project, still running at home.",
     stack: ["ESP32-C3", "PCB design", "Optocouplers", "Wi-Fi"],
     role: "Solo: schematic, PCB, soldering, firmware",
-    links: { repo: "" } // TODO
+    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/smart-gate" } // TODO: manca il firmware
   },
   {
     id: "espnow",
