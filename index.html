@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cosmin · Projects</title>
+<meta name="description" content="Embedded systems, robotics and software projects by Cosmin, Computer Engineering student at Politecnico di Torino and Tongji University.">
+<style>
+  :root{
+    --bg:#f4f2ec; --paper:#fbfaf6; --ink:#16181a; --muted:#5d6166; --line:#d9d5ca;
+    --pcb:#0f5b3a; --pcb-soft:#e3eee7; --copper:#b8722c;
+    --mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+    background-image:radial-gradient(var(--line) 1px, transparent 1px);background-size:22px 22px}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-family:var(--mono);font-size:13px}
+  header.top nav a{margin-left:18px;text-decoration:none;color:var(--muted)}
+  header.top nav a:hover{color:var(--pcb)}
+  .hero{padding:48px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--pcb)}
+  h1{font-size:clamp(40px,7vw,76px);line-height:1;margin:14px 0 6px;letter-spacing:-.03em}
+  .zh{color:var(--muted);font-size:15px;margin:0 0 20px}
+  .bio{max-width:640px;font-size:18px;color:#2b2e31}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .pill{font-family:var(--mono);font-size:12px;padding:5px 10px;border:1px solid var(--line);background:var(--paper);border-radius:3px}
+  .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .btn{font-family:var(--mono);font-size:13px;text-decoration:none;padding:10px 16px;border:1.5px solid var(--ink);border-radius:3px;background:var(--paper)}
+  .btn.primary{background:var(--pcb);border-color:var(--pcb);color:#fff}
+  section{padding:56px 0 8px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px}
+  .sec-head h2{margin:0;font-size:26px;letter-spacing:-.01em}
+  .sec-head .num{font-family:var(--mono);color:var(--copper);font-size:13px}
+  .sec-head .sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+  .featured{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s, box-shadow .15s}
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+  .media{aspect-ratio:16/10;background:var(--pcb-soft);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
+  .media img{width:100%;height:100%;object-fit:cover}
+  .media .ph{font-family:var(--mono);font-size:44px;color:var(--pcb);opacity:.55}
+  .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .tag{font-family:var(--mono);font-size:11px;color:var(--copper);text-transform:uppercase;letter-spacing:.06em}
+  .card h3{margin:0;font-size:20px;letter-spacing:-.01em}
+  .card .zh{font-size:13px;margin:0}
+  .card p{margin:0;color:#33373b;font-size:15px}
+  .role{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+  .stack span{font-family:var(--mono);font-size:11px;background:var(--pcb-soft);color:var(--pcb);padding:3px 7px;border-radius:2px}
+  .more{font-family:var(--mono);font-size:12px;margin-top:6px}
+  .more a{color:var(--pcb)}
+  .list{border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:200px 1fr auto;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+  .row h4{margin:0;font-size:16px}
+  .row p{margin:0;color:#33373b;font-size:15px}
+  .row .tag{white-space:nowrap}
+  .mw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+  .mw-empty{background:var(--paper);border:1px dashed var(--line);padding:22px;border-radius:4px;color:var(--muted)}
+  footer{margin:70px 0 40px;padding-top:22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media (max-width:640px){
+    .featured{grid-template-columns:1fr}
+    .row{grid-template-columns:1fr;gap:4px}
+    header.top nav a{margin-left:12px}
+    .sec-head .sub{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong id="brand">cosmin</strong>
+    <nav>
+      <a href="#projects">projects</a>
+      <a href="#makerworld">3d</a>
+      <a href="#more">more</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="kicker" id="loc"></div>
+    <h1 id="name"></h1>
+    <p class="zh" id="rolezh"></p>
+    <p class="bio" id="bio"></p>
+    <div class="cta" id="cta"></div>
+    <div class="pills" id="skills"></div>
+  </div>
+
+  <section id="projects">
+    <div class="sec-head"><span class="num">01</span><h2>Selected projects</h2><span class="sub">精选项目</span></div>
+    <div class="featured" id="featured"></div>
+  </section>
+
+  <section id="makerworld">
+    <div class="sec-head"><span class="num">02</span><h2>3D design &amp; printing</h2><span class="sub">3D 设计与打印</span></div>
+    <div id="mw"></div>
+  </section>
+
+  <section id="more">
+    <div class="sec-head"><span class="num">03</span><h2>More projects</h2><span class="sub">其他项目</span></div>
+    <div class="list" id="others"></div>
+  </section>
+
+  <footer id="contact">
+    <span id="contacts"></span>
+    <span>© <span id="year"></span> Cosmin</span>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const icons = {robotics:"⚙", embedded:"⌁", systems:"▤", software:"{ }"};
+
+  $("name").textContent = PROFILE.name;
+  $("loc").textContent = PROFILE.role + " · " + PROFILE.location;
+  $("rolezh").textContent = PROFILE.roleZh;
+  $("bio").textContent = PROFILE.bio;
+  $("skills").innerHTML = PROFILE.skills.map(s => `<span class="pill">${esc(s)}</span>`).join("");
+
+  const L = PROFILE.links, cta = [];
+  if (L.github) cta.push(`<a class="btn primary" href="${esc(L.github)}" target="_blank" rel="noopener">GitHub</a>`);
+  if (L.makerworld) cta.push(`<a class="btn" href="${esc(L.makerworld)}" target="_blank" rel="noopener">MakerWorld</a>`);
+  if (L.email) cta.push(`<a class="btn" href="mailto:${esc(L.email)}">Email</a>`);
+  $("cta").innerHTML = cta.join("");
+
+  const linkHtml = p => {
+    const out = [];
+    if (p.links?.repo) out.push(`<a href="${esc(p.links.repo)}" target="_blank" rel="noopener">code →</a>`);
+    if (p.links?.demo) out.push(`<a href="${esc(p.links.demo)}" target="_blank" rel="noopener">demo →</a>`);
+    return out.length ? `<div class="more">${out.join(" &nbsp; ")}</div>` : "";
+  };
+
+  $("featured").innerHTML = PROJECTS.filter(p => p.featured).map(p => `
+    <article class="card">
+      <div class="media">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">` : `<span class="ph">${icons[p.category] || "◇"}</span>`}</div>
+      <div class="body">
+        <span class="tag">${esc(p.tag)}</span>
+        <h3>${esc(p.title)}</h3>
+        ${p.titleZh ? `<p class="zh">${esc(p.titleZh)}</p>` : ""}
+        <p>${esc(p.summary)}</p>
+        ${p.role ? `<span class="role">↳ ${esc(p.role)}</span>` : ""}
+        <div class="stack">${(p.stack||[]).map(s => `<span>${esc(s)}</span>`).join("")}</div>
+        ${linkHtml(p)}
+      </div>
+    </article>`).join("");
+
+  $("others").innerHTML = PROJECTS.filter(p => !p.featured).map(p => `
+    <div class="row">
+      <h4>${esc(p.title)}</h4>
+      <p>${esc(p.summary)} ${p.links?.repo ? `<a href="${esc(p.links.repo)}" target="_blank" rel="noopener" style="color:var(--pcb)">code →</a>` : ""}</p>
+      <span class="tag">${esc(p.tag)}</span>
+    </div>`).join("");
+
+  if (MAKERWORLD.length) {
+    $("mw").innerHTML = `<div class="mw-grid">${MAKERWORLD.map(m => `
+      <a class="card" href="${esc(m.url)}" target="_blank" rel="noopener" style="text-decoration:none">
+        <div class="media">${m.image ? `<img src="${esc(m.image)}" alt="${esc(m.title)}" loading="lazy">` : `<span class="ph">△</span>`}</div>
+        <div class="body"><h3 style="font-size:16px">${esc(m.title)}</h3>${m.note ? `<p>${esc(m.note)}</p>` : ""}</div>
+      </a>`).join("")}</div>`;
+  } else {
+    $("mw").innerHTML = `<div class="mw-empty">I design and print functional parts and publish them on MakerWorld.${L.makerworld ? ` <a href="${esc(L.makerworld)}" target="_blank" rel="noopener" style="color:var(--pcb)">See my models →</a>` : ""}</div>`;
+  }
+
+  const c = [];
+  if (L.github) c.push(`<a href="${esc(L.github)}">github</a>`);
+  if (L.makerworld) c.push(`<a href="${esc(L.makerworld)}">makerworld</a>`);
+  if (L.linkedin) c.push(`<a href="${esc(L.linkedin)}">linkedin</a>`);
+  if (L.email) c.push(`<a href="mailto:${esc(L.email)}">${esc(L.email)}</a>`);
+  $("contacts").innerHTML = c.join(" · ");
+  $("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# --- Segreti e configurazioni locali (mai nel repo) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+secrets/
+secrets.*
+credentials*.json
+*.local.json
+config.local.*
+
+# --- File di sistema / editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.directory
+*~
+*.swp
+*.swo
+.~lock.*#
+.idea/
+.vscode/
+
+# --- Nextcloud ---
+.sync_*.db*
+.owncloudsync.log
+*conflicted copy*
+
+# --- Note interne per Claude Code: restano in locale, NON vanno pubblicate su GitHub Pages ---
+CLAUDE.md
