@@ -45,7 +45,7 @@ const PROJECTS = [
     summary: "A custom PCB with an ESP32-C3 that sits on top of the original gate remote and presses its buttons, so the gate opens from my phone over the internet while the normal remote keeps working. My final high-school project, still running at home.",
     stack: ["ESP32-C3", "PCB design", "Optocouplers", "Wi-Fi"],
     role: "Solo: schematic, PCB, soldering, firmware",
-    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/smart-gate" } // TODO: manca il firmware
+    links: { repo: "projects/smart-gate/" } // TODO: manca il firmware
   },
   {
     id: "espnow",
@@ -58,7 +58,7 @@ const PROJECTS = [
     summary: "Battery nodes read temperature, humidity, light and soil moisture and sleep most of the time. A door node detects when the door opens and the receiver sends an instant phone notification. Debugged real issues like the ADC2/Wi-Fi conflict and deep-sleep crashes.",
     stack: ["ESP32", "ESP-NOW", "Deep sleep", "NVS", "Telegram bot"],
     role: "Solo",
-    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/esp32-espnow-sensor-network" } // TODO: manca il codice del door node
+    links: { repo: "projects/esp32-espnow-sensor-network/" } // TODO: manca il codice del door node
   },
   {
     id: "robot-car",
@@ -104,7 +104,7 @@ const PROJECTS = [
     image: "",
     summary: "Collects recipes from the web and processes them with IBM watsonx.",
     stack: ["Python", "Web scraping", "IBM watsonx"],
-    links: { repo: "https://github.com/Cosmin702/portfolio/tree/main/projects/recipe-scraper" }
+    links: { repo: "projects/recipe-scraper/" }
   },
   {
     id: "codicefiscale",

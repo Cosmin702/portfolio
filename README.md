@@ -4,7 +4,7 @@
 
 I study Computer Engineering at Politecnico di Torino, and this year I'm on exchange at Tongji University (EIE, Politong program). I like building things where software meets hardware.
 
-**Site:** https://cosmin702.github.io/portfolio/ · **GitHub:** https://github.com/Cosmin702
+**Site:** https://projects.cosmincloud.ovh · **GitHub:** https://github.com/Cosmin702
 
 ## What's in this repo
 | Path | What it is |
