@@ -12,6 +12,7 @@ I study Computer Engineering at Politecnico di Torino, and this year I'm on exch
 | `index.html`, `data.js`, `assets/` | The portfolio site: static, no build step, no external requests (it has to load fast from mainland China). All content is in `data.js`. |
 | [`projects/smart-gate/`](projects/smart-gate/) | Custom ESP32-C3 PCB that presses the gate remote's buttons through optocouplers: schematic, PCB and Gerbers (EasyEDA). |
 | [`projects/esp32-espnow-sensor-network/`](projects/esp32-espnow-sensor-network/) | Battery ESP32 sensor nodes → receiver over ESP-NOW, with deep sleep, an OLED display and live web charts (C++/Arduino). |
+| [`projects/senpai-chase/`](projects/senpai-chase/) | Touch game on the ESP32 "Cheap Yellow Display": DMA strip rendering, touch calibration, sprites generated in Python (3D SDF ray marching for the girl). |
 | [`projects/memory-game/`](projects/memory-game/) | Browser memory game with accounts and an online leaderboard on CouchDB (HTML/CSS/JS). |
 | [`projects/password-checker/`](projects/password-checker/) | Checks a password-manager export against Have I Been Pwned using k-anonymity (Python). |
 | [`projects/recipe-scraper/`](projects/recipe-scraper/) | Scrapes a random recipe from GialloZafferano (Python, BeautifulSoup). |

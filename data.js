@@ -87,6 +87,16 @@ const PROJECTS = [
     links: { repo: "" }
   },
   {
+    id: "senpai-chase",
+    title: "Senpai Chase (ESP32 touch game)",
+    tag: "ESP32 · C++ · Python",
+    category: "embedded",
+    image: "",
+    summary: "A small touch game on the ESP32 \"Cheap Yellow Display\": a chibi of me follows your finger and a pre-rendered 3D anime girl chases him through a sakura park. DMA strip rendering, touch calibration in NVS, sprites generated with Python.",
+    stack: ["ESP32", "TFT_eSPI", "DMA", "Python"],
+    links: { repo: "projects/senpai-chase/" } // TODO: video della demo
+  },
+  {
     id: "memory",
     title: "Memory game",
     tag: "Web",
